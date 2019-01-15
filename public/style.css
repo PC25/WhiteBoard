@@ -1,0 +1,73 @@
+
+/**
+ * Fix user-agent
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Canvas
+ */
+
+.navbar {
+  color: #302740;
+  background-color: #333323;
+  height:12%;
+  padding: 25px;
+  color:#ffffff;
+  font-family: arial;
+  font-size: 20px;
+  justify-content: center;
+}
+#hdt {
+  text-align: center;
+}
+
+.whiteboard {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.colors {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius:8px;
+  border-color: #321866;
+  padding-left: 50px;
+  margin-left: -30px;
+  background-color: #FCFAFC;
+}
+
+.color {
+  display: inline-block;
+  height: 54px;
+  width: 54px;
+  margin:14px;
+  border-radius: 20%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #542851;
+  }
+
+.color.black { background-color: black; }
+.color.red { background-color: #EB0C0C; }
+.color.green { background-color: green; }
+.color.blue { background-color:   #4169E1; }
+.color.yellow { background-color: #FFFF54; }
