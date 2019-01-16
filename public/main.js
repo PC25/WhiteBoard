@@ -1,5 +1,3 @@
-'use strict';
-
 (function() {
 
   var socket = io();
@@ -24,7 +22,7 @@
   canvas.addEventListener('mouseout', onMouseUp, false);
   canvas.addEventListener('mousemove', throttle(onMouseMove, 10), false);
   
-  //Touch support for mobile devices
+//Touch
   canvas.addEventListener('touchstart', onMouseDown, false);
   canvas.addEventListener('touchend', onMouseUp, false);
   canvas.addEventListener('touchcancel', onMouseUp, false);
@@ -85,7 +83,7 @@
     current.color = e.target.className.split(' ')[1];
   }
 
-  // limit the number of events per second
+//limit events
   function throttle(callback, delay) {
     var previousCall = new Date().getTime();
     return function() {
@@ -104,7 +102,6 @@
     drawLine(data.x0 * w, data.y0 * h, data.x1 * w, data.y1 * h, data.color);
   }
 
-  // make the canvas fill its parent
   function onResize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
